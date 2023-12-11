@@ -4,13 +4,13 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 os.system("cls")
-data = pd.read_excel(r"D:\pythonprogram\GA1Excel.xlsx",sheet_name="2023_1")
+data = pd.read_excel(r"D:\pythonprogram\GA1Excel.xlsx",sheet_name="2022_1")
 month=['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 df=pd.DataFrame(data)
 columnnames=list(df.columns.values)
 
-xm=month[0:9]
-x=[0,1,2,3,4,5,6,7,8]
+xm=month[0:12]
+x=[0,1,2,3,4,5,6,7,8,9,10,11]
 
 y=np.array(df['Total Loan/Financing Applied'])
 
@@ -26,5 +26,4 @@ for xs, ys in zip(x, y):
 
 plt.grid(True)
 plt.title('Total Loan/Financing Applied each month in 2023')
-
 plt.show() 
