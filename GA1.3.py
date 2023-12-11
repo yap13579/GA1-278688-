@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 os.system("cls")
+#replace directory with the current location of your excel file
 data = pd.read_excel(r"D:\pythonprogram\GA1Excel.xlsx",sheet_name="2022_1")
 month=['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 df=pd.DataFrame(data)
@@ -25,5 +26,5 @@ for xs, ys in zip(x, y):
     plt.text(xs, ys, str(f'RM{ys:.2f}'), color="black", fontsize=12)
 
 plt.grid(True)
-plt.title('Total Loan/Financing Applied each month in 2023')
+plt.title('Total Loan/Financing Applied each month in 2022')
 plt.show() 

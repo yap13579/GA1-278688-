@@ -2,6 +2,7 @@ import pandas as pd
 import os
 import matplotlib.pyplot as plt 
 os.system("cls")
+#replace directory with the current location of your excel file
 data = pd.read_excel(r"D:\pythonprogram\GA1Excel.xlsx",sheet_name="2023_1")
 month=['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 df=pd.DataFrame(data)
