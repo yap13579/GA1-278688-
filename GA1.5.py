@@ -7,13 +7,11 @@ data = pd.read_excel(r"D:\pythonprogram\GA1Excel.xlsx",sheet_name="2022_3")
 month=['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
 df=pd.DataFrame(data)
 columnnames=list(df.columns.values)
-print(df)
-print(columnnames)
+
 tl=df['Jumlah / Total']
 df=df.drop(['Month'],axis=1)
 df.insert(0,'Month',month)
-print(df)
-print(columnnames)
+
 df=df.drop(['Jumlah / Total'],axis=1)
 
 ax=df.plot(kind="bar",ylabel='RM million',xlabel='Month',stacked=True,width=0.8,figsize=(30,8))
